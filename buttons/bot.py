@@ -17,13 +17,13 @@ class Confirm(nextcord.ui.View):
     @nextcord.ui.button(label="Confirm", style=nextcord.ButtonStyle.danger)
     async def confirm(self, button: nextcord.ui.Button, interaction: nextcord.Interaction):
         await interaction.response.send_message("Confirming", ephemeral=True)
-        self.vaule = True
+        self.value = True
         self.stop()
 
     @nextcord.ui.button(label="Cancel", style=nextcord.ButtonStyle.blurple)
     async def cancel(self, button: nextcord.ui.Button, interaction: nextcord.Interaction):
         await interaction.response.send_message("Cancelling", ephemeral=True)
-        self.vaule = False
+        self.value = False
         self.stop()
 
 @client.command()
